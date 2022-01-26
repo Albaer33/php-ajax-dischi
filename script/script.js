@@ -7,7 +7,7 @@ const app = new Vue(
             albums: []
         },
         methods: {
-            getDatabaseAlbums: function() {
+            getAlbums: function() {
                 axios.get('http://localhost:8888/php-ajax-dischi/server.php')
 
                 .then((response) => {
@@ -16,7 +16,7 @@ const app = new Vue(
             }
         },
         created: function() {
-            this.getDatabaseAlbums();
+            this.getAlbums();
         }
     }
 );
